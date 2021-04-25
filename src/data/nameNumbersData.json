@@ -1,0 +1,397 @@
+{
+  "schemaVersion": "0.1.0",
+  "languageCode": "pt-BR",
+  "languageDescription": "Português",
+  "genderCodes": [
+    "M",
+    "F"
+  ],
+  "genderDescriptions": [
+    "Masculino",
+    "Feminino"
+  ],
+  "data": [
+    {
+      "mode": "cardinal",
+      "numberStructures": {
+        "periods": [
+          {
+            "defaultName": "",
+            "genderInflection": true,
+            "requireConnectionToObject": false
+          },
+          {
+            "defaultName": "mil",
+            "genderInflection": true,
+            "requireConnectionToObject": false
+          },
+          {
+            "singularName": "milhão",
+            "pluralName": "milhões",
+            "genderInflection": false,
+            "genderDefault": "M",
+            "requireConnectionToObject": true
+          },
+          {
+            "singularName": "bilhão",
+            "pluralName": "bilhões",
+            "genderInflection": false,
+            "genderDefault": "M",
+            "requireConnectionToObject": true
+          },
+          {
+            "singularName": "trilhão",
+            "pluralName": "trilhões",
+            "genderInflection": false,
+            "genderDefault": "M",
+            "requireConnectionToObject": true
+          },
+          {
+            "singularName": "quatrilhão",
+            "pluralName": "quatrilhões",
+            "genderInflection": false,
+            "genderDefault": "M",
+            "requireConnectionToObject": true
+          }
+        ],
+        "singleDigits": {
+          "ones": [
+            "",
+            [
+              "um",
+              "uma"
+            ],
+            [
+              "dois",
+              "duas"
+            ],
+            "três",
+            "quatro",
+            "cinco",
+            "seis",
+            "sete",
+            "oito",
+            "nove"
+          ],
+          "tens": [
+            "",
+            "dez",
+            "vinte",
+            "trinta",
+            "quarenta",
+            "cinquenta",
+            "sessenta",
+            "setenta",
+            "oitenta",
+            "noventa"
+          ],
+          "hundreds": [
+            "",
+            "cento",
+            [
+              "duzentos",
+              "duzentas"
+            ],
+            [
+              "trezentos",
+              "trezentas"
+            ],
+            [
+              "quatrocentos",
+              "quatrocentas"
+            ],
+            [
+              "quinhentos",
+              "quinhentas"
+            ],
+            [
+              "seiscentos",
+              "seiscentas"
+            ],
+            [
+              "setecentos",
+              "setecentas"
+            ],
+            [
+              "oitocentos",
+              "oitocentas"
+            ],
+            [
+              "novecentos",
+              "novecentas"
+            ]
+          ]
+        },
+        "exceptions": {
+          "wholeNumber": [
+            {
+              "number": 0,
+              "wordNumber": "zero"
+            }
+          ],
+          "hundreds": [
+            {
+              "number": 100,
+              "wordNumber": "cem"
+            }
+          ],
+          "tens": [
+            {
+              "number": 11,
+              "wordNumber": "onze"
+            },
+            {
+              "number": 12,
+              "wordNumber": "doze"
+            },
+            {
+              "number": 13,
+              "wordNumber": "treze"
+            },
+            {
+              "number": 14,
+              "wordNumber": "quatorze"
+            },
+            {
+              "number": 15,
+              "wordNumber": "quinze"
+            },
+            {
+              "number": 16,
+              "wordNumber": "dezesseis"
+            },
+            {
+              "number": 17,
+              "wordNumber": "dezessete"
+            },
+            {
+              "number": 18,
+              "wordNumber": "dezoito"
+            },
+            {
+              "number": 19,
+              "wordNumber": "dezenove"
+            }
+          ],
+          "periods": [
+            {
+              "periodIndex": 1,
+              "number": 1,
+              "wordNumber": "mil"
+            }
+          ]
+        },
+        "connectors": {
+          "insidePeriod": " e ",
+          "beforePeriodName": " ",
+          "betweenPeriods": {
+            "syndethic": " e ",
+            "asyndethic": ", "
+          },
+          "toObject": "de"
+        }
+      }
+    },
+    {
+      "mode": "ordinal",
+      "numberStructures": {
+        "periods": [
+          {
+            "defaultName": "",
+            "genderInflection": true,
+            "requireConnectionToObject": false
+          },
+          {
+            "defaultName": [
+              "milésimo",
+              "milésima"
+            ],
+            "genderInflection": true,
+            "requireConnectionToObject": false
+          },
+          {
+            "defaultName": [
+              "milionésimo",
+              "milionésima"
+            ],
+            "genderInflection": true,
+            "requireConnectionToObject": false
+          },
+          {
+            "defaultName": [
+              "bilionésimo",
+              "bilionésima"
+            ],
+            "genderInflection": true,
+            "requireConnectionToObject": false
+          },
+          {
+            "defaultName": [
+              "trilionésimo",
+              "trilionésima"
+            ],
+            "genderInflection": true,
+            "requireConnectionToObject": false
+          },
+          {
+            "defaultName": [
+              "quatrilionésimo",
+              "quetrilionésima"
+            ],
+            "genderInflection": true,
+            "requireConnectionToObject": false
+          }
+        ],
+        "singleDigits": {
+          "ones": [
+            "",
+            [
+              "primeiro",
+              "primeira"
+            ],
+            [
+              "segundo",
+              "segunda"
+            ],
+            [
+              "terceiro",
+              "terceira"
+            ],
+            [
+              "quarto",
+              "quarta"
+            ],
+            [
+              "quinto",
+              "quinta"
+            ],
+            [
+              "sexto",
+              "sexta"
+            ],
+            [
+              "sétimo",
+              "sétima"
+            ],
+            [
+              "oitavo",
+              "oitava"
+            ],
+            [
+              "nono",
+              "nona"
+            ]
+          ],
+          "tens": [
+            "",
+            [
+              "décimo",
+              "décima"
+            ],
+            [
+              "vigésimo",
+              "vigésima"
+            ],
+            [
+              "trigésimo",
+              "trigésima"
+            ],
+            [
+              "quadragésimo",
+              "quadragésima"
+            ],
+            [
+              "quinquagésimo",
+              "quinquagésima"
+            ],
+            [
+              "sexagésimo",
+              "sexagésima"
+            ],
+            [
+              "septuagésimo",
+              "septuagésima"
+            ],
+            [
+              "octogésimo",
+              "octogésima"
+            ],
+            [
+              "nonagésimo",
+              "nonagésima"
+            ]
+          ],
+          "hundreds": [
+            "",
+            [
+              "centésimo",
+              "centésima"
+            ],
+            [
+              "ducentésimo",
+              "ducentésima"
+            ],
+            [
+              "tricentésimo",
+              "tricentésima"
+            ],
+            [
+              "quadringentésimo",
+              "quadringentésima"
+            ],
+            [
+              "quingentésimo",
+              "quingentésima"
+            ],
+            [
+              "sexcentésimo",
+              "sexcentésima"
+            ],
+            [
+              "septigentésimo",
+              "septigentésima"
+            ],
+            [
+              "octigentésimo",
+              "octigentésima"
+            ],
+            [
+              "noningentésimo",
+              "noningentésima"
+            ]
+          ]
+        },
+        "exceptions": {
+          "wholeNumber": [
+            {
+              "number": 0,
+              "wordNumber": [
+                "zerésimo",
+                "zerésima"
+              ]
+            }
+          ],
+          "periods": [
+            {
+              "periodIndex": 1,
+              "number": 1,
+              "wordNumber": [
+                "milésimo",
+                "milésima"
+              ]
+            }
+          ]
+        },
+        "connectors": {
+          "insidePeriod": " ",
+          "beforePeriodName": " ",
+          "betweenPeriods": {
+            "syndethic": " ",
+            "asyndethic": ", "
+          },
+          "toObject": ""
+        }
+      }
+    }
+  ]
+}
