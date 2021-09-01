@@ -207,7 +207,8 @@
               "milésima"
             ],
             "genderInflection": true,
-            "requireConnectionToObject": false
+            "requireConnectionToObject": false,
+            "borrowMode": "cardinal"
           },
           {
             "defaultName": [
@@ -215,7 +216,8 @@
               "milionésima"
             ],
             "genderInflection": true,
-            "requireConnectionToObject": false
+            "requireConnectionToObject": false,
+            "borrowMode": "cardinal"
           },
           {
             "defaultName": [
@@ -223,7 +225,8 @@
               "bilionésima"
             ],
             "genderInflection": true,
-            "requireConnectionToObject": false
+            "requireConnectionToObject": false,
+            "borrowMode": "cardinal"
           },
           {
             "defaultName": [
@@ -231,15 +234,17 @@
               "trilionésima"
             ],
             "genderInflection": true,
-            "requireConnectionToObject": false
+            "requireConnectionToObject": false,
+            "borrowMode": "cardinal"
           },
           {
             "defaultName": [
               "quatrilionésimo",
-              "quetrilionésima"
+              "quatrilionésima"
             ],
             "genderInflection": true,
-            "requireConnectionToObject": false
+            "requireConnectionToObject": false,
+            "borrowMode": "cardinal"
           }
         ],
         "singleDigits": {
@@ -378,6 +383,38 @@
               "wordNumber": [
                 "milésimo",
                 "milésima"
+              ]
+            },
+            {
+              "periodIndex": 2,
+              "number": 1,
+              "wordNumber": [
+                "milionésimo",
+                "milionésima"
+              ]
+            },
+            {
+              "periodIndex": 3,
+              "number": 1,
+              "wordNumber": [
+                "bilionésimo",
+                "bilionésima"
+              ]
+            },
+            {
+              "periodIndex": 4,
+              "number": 1,
+              "wordNumber": [
+                "trilionésimo",
+                "trilionésima"
+              ]
+            },
+            {
+              "periodIndex": 5,
+              "number": 1,
+              "wordNumber": [
+                "quatrililionésimo",
+                "quatrililionésima"
               ]
             }
           ]

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "API to convert number to number in full",
   "main": "index.js",
-  "repository": "git@github.com:ibere82/numerosPorExtenso",
+  "repository": "git@https://github.com/ibere82/pt-br-number-in-full",
   "author": "Iberê <ibere82@gmail.com> collaboration Portuguese Language Consulting by Diei Rodrigues",
   "license": "MIT",
   "scripts": {

@@ -4,27 +4,20 @@ const optionsDefault = require('./optionsDefault.js');
 const getModesList = require('./getModesList.js');
 const getGenderList = require('./getGenderList.js');
 
-/**
- * 
- * Check if parameters are valid, return them or throw an error.
- * 
- * @param {string | number} inputedNumber a integer greater than or equal to zero with up to 15 digits.
- * @param {string} inputedGender a letter 'F' or 'M' indicating the numeric gender.
- * @param {string} inputedLanguage the language code.
- * @param {objct} inputedOptions a specific object containing mode and appendWith.
- * @returns a object containing a valid appendWith, stringNumber, gender and mode.
- */
-function validateParameters(inputedNumber, inputedGender, inputedOptions) {
+function validateParameters(inputedNumber, inputedGender, inputedOptions,) {
   'use strict';
 
   const stringNumber = validateNumber(inputedNumber);
+
   const {
     mode: inputedMode = optionsDefault.mode,
-    appendWith: inputedAppendWith } = validateOptions(inputedOptions);
+    appendWith: inputedAppendWith,
+  } = validateOptions(inputedOptions);
+
   const mode = validateMode(inputedMode);
   const gender = validateGender(inputedGender);
-  const appendWith = validateAppendWith(inputedAppendWith, stringNumber, mode);
-  return { appendWith, stringNumber, gender, mode };
+  const appendWith = validateAppendWith(inputedAppendWith, stringNumber, mode,);
+  return { appendWith, stringNumber, gender, mode, };
 };
 
 function validateNumber(inputedNumber) {

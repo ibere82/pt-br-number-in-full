@@ -2,14 +2,14 @@
 
 const getNumberStructures = require('./getNumberStructures.js');
 
-function numberObject(stringNumber, gender, mode, appendWith) {
+function numberObject(stringNumber, gender, mode, appendWith,) {
 
   const {
     wholeNumberExceptions,
     periods,
     toObjectConnector,
     syndethicConnector,
-    asyndethicConnector
+    asyndethicConnector,
   } = getNumberStructures(mode)
 
   const requireConnection = !!appendWith;
@@ -24,7 +24,7 @@ function numberObject(stringNumber, gender, mode, appendWith) {
     requireConnection,
     toObjectConnector,
     syndethicConnector,
-    asyndethicConnector
+    asyndethicConnector,
   }
 };
 

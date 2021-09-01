@@ -1,16 +1,6 @@
 'use strict';
 
-/**
- * 
- * Converts a stringNumber to an array of stringNumbers separeted by periods in 
- * reversed order. The reverse order is important to facilitate the logic using 
- * the array index to find the correct period name.
- * 
- * @example createNumericArrayPeriods('123456789') // [ '789', '456', '123' ]
- * @param {string} stringNumber a stringNumber.
- * @returns an array of strings.
- */
-function createNumericArrayPeriods(stringNumber) {
+function createNumericArrayPeriods(stringNumber,) {
   'use strict';
 
   const digits = stringNumber.length;
@@ -28,11 +18,11 @@ function createNumericArrayPeriods(stringNumber) {
 };
 
 
-function reverse(text) {
+function reverse(text,) {
   'use strict';
 
   return text.split('').reverse().join('');
 };
 
 
-module.exports = { createNumericArrayPeriods, reverse }
+module.exports = { createNumericArrayPeriods, reverse, }
