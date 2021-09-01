@@ -1,5 +1,5 @@
 {
-  "name": "numbers-in-full",
+  "name": "pt-br-numbers-in-full",
   "version": "1.0.0",
   "description": "API to convert number to number in full",
   "main": "index.js",
