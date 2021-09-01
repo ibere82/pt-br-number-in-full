@@ -168,7 +168,7 @@ test('should return the default appendWith as appendWith if this attribute be a 
 
 });
 
-test('should return a empty string appendWith if this attribute doesnt declared', () => {
+test('should return an empty string appendWith if this attribute doesnt declared', () => {
   expect(validateParameters(2, 'M')
     .appendWith).toBe('');
 });

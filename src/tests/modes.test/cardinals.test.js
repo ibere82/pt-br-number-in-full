@@ -9,6 +9,7 @@ test('should return the correct potuguese numbers', () => {
 
   convertedNumber[0] = converter(1, 'F', { appendWith: { singular: 'casa', plural: 'casas' } });
   expectedResponse[0] = 'uma casa';
+
   convertedNumber[1] = converter('2', 'F', { appendWith: 'casas' });
   expectedResponse[1] = 'duas casas';
   convertedNumber[2] = converter('0', 'F', { appendWith: 'casas' });
@@ -35,6 +36,8 @@ test('should return the correct potuguese numbers', () => {
   expectedResponse[12] = 'mil casas';
   convertedNumber[13] = converter('32578936', 'F');
   expectedResponse[13] = 'trinta e dois milhões, quinhentas e setenta e oito mil, novecentas e trinta e seis';
+
+
 
   convertedNumber.forEach((number, index) => {
     expect(number).toBe(expectedResponse[index]);

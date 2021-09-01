@@ -35,7 +35,7 @@
  * *****************************************************************************
  *  
  * This script receives params, validates them and creates an numberObject.
- * Then it pipes this object to a chain functions other functions to finally get
+ * Then it pipes this object to an other functions chain to finally get
  * a word Number.
  *  
  * Follow the functions pipe-line:

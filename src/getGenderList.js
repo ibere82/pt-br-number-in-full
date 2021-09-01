@@ -1,9 +1,8 @@
 'use strict';
 
-const dataBase = require('./loadData.js');
+const { genderCodes } = require('./data/nameNumbersData.json');
 
 function getGenderList() {
-  const { genderCodes } = dataBase;
   return genderCodes;
 };
 

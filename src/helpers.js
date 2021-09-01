@@ -1,14 +1,12 @@
 'use strict';
 
-const { reverse } = require('./stringHelpers.js');
-
 /**
  * 
  * Converts a stringNumber to an array of stringNumbers separeted by periods in 
  * reversed order. The reverse order is important to facilitate the logic using 
  * the array index to find the correct period name.
  * 
- * @example createNumericArrayPeriods('123456789') => [ '789', '456', '123' ]
+ * @example createNumericArrayPeriods('123456789') // [ '789', '456', '123' ]
  * @param {string} stringNumber a stringNumber.
  * @returns an array of strings.
  */
@@ -29,4 +27,12 @@ function createNumericArrayPeriods(stringNumber) {
   return arrayNumber;
 };
 
-module.exports = createNumericArrayPeriods;
+
+function reverse(text) {
+  'use strict';
+
+  return text.split('').reverse().join('');
+};
+
+
+module.exports = { createNumericArrayPeriods, reverse }

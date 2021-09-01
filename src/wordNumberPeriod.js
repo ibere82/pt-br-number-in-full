@@ -1,10 +1,10 @@
 'use strict';
 
-const getHundredsToWords = require('./getHundredsWords.js');
 const getStringFromArray = require('./getStringFromArray.js');
 const getNumberStructures = require('./getNumberStructures.js');
 const findException = require('./findException.js');
 const connect = require('./connect.js');
+const hundredsWords = require('./hundredsWords.js');
 
 /**
  * 
@@ -36,54 +36,57 @@ const connect = require('./connect.js');
  }
  * @param {string} periodValue a stringNumber.
  * @param {number} index a position of array period.
- * @param {string} genderIndex a letter 'F' or 'M' indicating the numeric genderIndex.
- * @param {string} lang the language code.
- * @param {string} originalMode a string 'cardinal' or 'ordinal' by example.
+ * @param {string} numberObject a numberObject
  * @returns an object containing the converted string,
  * a boolean indicating if this string is a connected sentence and 
  * a boolean indicating if this string require connection with objects.
  */
-function wordNumberPeriod(periodValue, index, numberObject) {
+function wordNumberPeriod(numberObject) {
   'use strict';
-
   const { periods, gender, mode: originalMode } = numberObject
 
-  const { defaultName,
-    singularName,
-    pluralName,
-    requireConnectionToObject,
-    borrowMode,
-    genderInflection } = periods[index];
+  function get(periodValue, index) {
+    const { defaultName,
+      singularName,
+      pluralName,
+      requireConnectionToObject,
+      borrowMode,
+      genderInflection } = periods[index];
 
-  const periodGender = genderInflection ? gender : null;
+    const periodGender = genderInflection ? gender : null;
 
-  const mode = borrowMode || originalMode
-  const periodNumberObject = getNumberStructures(mode);
-  const { periodsExceptions, beforePeriodNameConnector } = periodNumberObject;
+    //const mode = borrowMode || originalMode
+    const mode = originalMode;
 
-  const exceptions = periodsExceptions.filter(({ periodIndex }) => periodIndex === index);
+    const periodNumberObject = getNumberStructures(mode);
+    const { periodsExceptions, beforePeriodNameConnector } = periodNumberObject;
 
-  const exception = findException(exceptions, periodValue, periodGender);
-  if (exception) return { periodToWords: exception, hasSyndeton: false };
+    const exceptions = periodsExceptions.filter(({ periodIndex }) => periodIndex === index);
 
-  const { hundredsToWords, hasConnection } =
-    getHundredsToWords(periodValue, periodGender, periodNumberObject);
+    const exception = findException(exceptions, periodValue, periodGender);
+    if (exception) return { periodToWords: exception, hasSyndeton: false };
 
-  const periodNameField = hundredsToWords
-    ? defaultName !== undefined
-      ? defaultName :
-      parseInt(periodValue) === 1
-        ? singularName
-        : pluralName
-    : '';
+    const { hundredsToWords, hasConnection } = hundredsWords(periodNumberObject, periodGender).get(periodValue);
 
-  const periodLabel = getStringFromArray(periodNameField, gender);
+    const periodNameField = hundredsToWords
+      ? defaultName !== undefined
+        ? defaultName :
+        parseInt(periodValue) === 1
+          ? singularName
+          : pluralName
+      : '';
 
-  const { partialNumberWord: periodToWords } =
-    connect(hundredsToWords, periodLabel, beforePeriodNameConnector);
+    const periodLabel = getStringFromArray(periodNameField, gender);
 
-  return { periodToWords, hasConnection, requireConnectionToObject };
+    const { partialNumberWord: periodToWords } =
+      connect(hundredsToWords, periodLabel, beforePeriodNameConnector);
 
+
+
+    return { periodToWords, hasConnection, requireConnectionToObject };
+  };
+
+  return { get }
 };
 
 module.exports = wordNumberPeriod;

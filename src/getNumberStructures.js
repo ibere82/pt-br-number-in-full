@@ -1,6 +1,6 @@
 'use strict';
 
-const { data } = require('./loadData.js');
+const { data } = require('./data/nameNumbersData.json');
 
 /**
  * 
@@ -24,7 +24,7 @@ function getNumberStructures(mode) {
     periods: periodsExceptions,
     tens: tensExceptions,
     hundreds: hundredsExceptions,
-    wholeNumber: wholeNumberExceptions } = exceptions
+    wholeNumber: wholeNumberExceptions } = exceptions;
 
   const {
     betweenPeriods,

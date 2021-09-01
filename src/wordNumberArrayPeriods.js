@@ -1,7 +1,7 @@
 'use strict';
 
 const wordNumberPeriod = require('./wordNumberPeriod.js');
-const createNumericArrayPeriods = require('./arrayHelpers.js');
+const { createNumericArrayPeriods } = require('./helpers.js');
 
 /**
  * 
@@ -55,12 +55,13 @@ const createNumericArrayPeriods = require('./arrayHelpers.js');
  */
 function wordNumberArrayPeriods(numberObject) {
   'use strict';
+  const getPeriod = wordNumberPeriod(numberObject).get
 
   const { stringNumber } = numberObject;
   const arrayNumber = createNumericArrayPeriods(stringNumber);
   const wordArrayPeriod = arrayNumber
     .map((periodValue, index) =>
-      wordNumberPeriod(periodValue, index, numberObject));
+      getPeriod(periodValue, index));
 
   return wordArrayPeriod;
 };

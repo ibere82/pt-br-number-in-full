@@ -51,7 +51,9 @@ function wordNumber(numberObject) {
               : syndethicConnector;
 
         const endConnection =
-          requireConnection && index === arrayWithoutEmptyElems.length - 1 && requireConnectionToObject
+          requireConnection &&
+            index === arrayWithoutEmptyElems.length - 1 &&
+            requireConnectionToObject
             ? ` ${toObjectConnector}`
             : '';
 
