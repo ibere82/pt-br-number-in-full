@@ -1,13 +1,13 @@
-# Converter v1.0.1
+# pt-br-number-in-full v1.0.1
 
 Converts a number to a brasilian portuguese word number
 
 ## Installation
 
 Using npm:
-$ npm i --save converter
+$ npm i --save pt-br-number-in-full
 
-var converter = require('converter');
+var converter = require('pt-br-number-in-full');
 
 ## Sintaxe
 converter(number, gender[, options])
